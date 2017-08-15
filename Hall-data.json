@@ -1,0 +1,38 @@
+{
+    "hall":{
+        "hall-1":{
+            "name":"1",
+            "address":{
+                "city":""
+            },
+            "location":"",
+            "contacts":{
+                "name":"",
+                "mobiles":[""],
+                "emails":[""]
+            },
+            "capecity":1000,
+            "photo-album":[],
+            "thumbnail":"",
+            "video":"",
+            "owner":"",
+            "reservation-instructions":"",
+            "additional-info":""
+        }
+    },
+    "reservation":[
+        {
+            "hall_key":"hall-1",
+            "date":{
+                "from": "",
+                "to": ""
+            },
+            "reservation_type":"",
+            "type_of_attendees":"",
+            "state":"",
+            "additional_info": "",
+            "price": 100000,
+            "installment": 1000
+        }
+    ]
+}
