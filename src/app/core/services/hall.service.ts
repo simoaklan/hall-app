@@ -1,11 +1,13 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Injectable()
 
 export class HallService{ 
- 
-  constructor (   
+  halls: FirebaseListObservable<any[]>;
+  constructor ( private db: AngularFireDatabase 
     ){              
-                   
+    this.halls = db.list("/hall");
   }
 }

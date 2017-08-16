@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { Route, Router} from '@angular/router';
+import { HallService } from './core/services/hall.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  halls: FirebaseListObservable<any[]>;
-  constructor(private db: AngularFireDatabase){
-    this.halls = db.list("/hall");
+export class AppComponent {  
+  constructor( private _hallService: HallService){
   }
   title = 'app';
 }

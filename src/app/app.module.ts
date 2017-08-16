@@ -1,34 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { environment } from '../environments/environment';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdListModule, MdButtonModule, MdCheckboxModule} from '@angular/material';
-import 'hammerjs';
 
+import 'hammerjs';
+import { environment } from '../environments/environment';
 import { CoreModule } from './core';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HallService } from './core/services/hall.service';
 import { AppComponent } from './app.component';
+import { HallComponent } from './hall/hall.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HallComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    MdListModule,
-    MdButtonModule,
-    MdCheckboxModule,
+    BrowserAnimationsModule,  
     CoreModule,
     AppRoutingModule
   ],
-  providers: [AppRoutingModule],
+  providers: [
+    AppRoutingModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
